@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: row-reverse;
-    background-image: url("C:\Users\91879\Documents\project\src\images\images.jpeg");
+    background-image: url("C:\Users\91879\OneDrive\Documents\GitHub\projectReact\src\images\images.jpeg");
     position: fixed;
     top: 0;
     left: 0;
