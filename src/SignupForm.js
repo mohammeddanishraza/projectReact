@@ -4,80 +4,42 @@ import { Link } from 'react-router-dom';
 import './SignupForm.css';
 
 function SignupForm() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [buttonEnabled, setButtonEnabled] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
+ 
+  const [selectedFile, setSelectedFile] = useState(null);
 
-  const handleUsernameChange = (event) => {
-    const value = event.target.value;
-    setUsername(value);
-    validateForm(value, password);
+  const handleFileChange = (event) => {
+    // Get the selected file from the input
+    const file = event.target.files[0];
+    setSelectedFile(file);
   };
 
-  const handlePasswordChange = (event) => {
-    const value = event.target.value;
-    setPassword(value);
-    validateForm(username, value);
-  };
-  const handleSubmit = () => {
-   alert("Username: "+username+"\nPassword: "+password);
-
+  const handleRemoveFile = () => {
+    // Reset selected file to null
+    setSelectedFile(null);
   };
 
-  const validateForm = (username, password) => {
-    if (username.length !== 0 && password.length !== 0)
-      setButtonEnabled(true);
-    else
-      setButtonEnabled(false);
-  };
-
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+  const handleUpload = () => {
+    // Handle file upload logic here (e.g., send file to server)
+    if (selectedFile) {
+      console.log('Selected file:', selectedFile);
+      // You can implement file upload logic (e.g., using FormData and fetch)
+    } else {
+      console.log('No file selected');
+    }
   };
 
   return (
-    <div className='container'>
-      <div className='login'>
-        <p className="login-text">Signup</p>
-        <input
-          type="text"
-          placeholder='Username'
-          className='login-input'
-          value={username}
-          onChange={handleUsernameChange}
-        />
-        <input
-          type={showPassword ? 'text' : 'password'}
-          placeholder='Password'
-          className='login-input'
-          value={password}
-          onChange={handlePasswordChange}
-        />
-        <button
-          type="button"
-          className="show-hide-button"
-          onClick={togglePasswordVisibility}
-        >
-          {showPassword ? 'Hide' : 'Show'}
-        </button>
-        <button
-          type="submit"
-          className="login-button"
-          disabled={!buttonEnabled}
-          onClick={handleSubmit}
-        >
-          Login
-        </button>
-        <div className='signin'>
-          <p>New user?</p>
-          <button type="submit" className="signin-button">
-            Sign In
-          </button>
-        </div>
+    <div style={{backgroundColor:"white", background:"none"}}>
+    <input type="file" onChange={handleFileChange} />
+    {selectedFile && (
+      <div>
+        <p>Selected file: {selectedFile.name}</p>
+        <button onClick={handleRemoveFile}>Remove File</button>
       </div>
-    </div>
-  );
+    )}
+    <button onClick={handleUpload}>Upload File</button>
+  </div>
+);
 }
 
 export default SignupForm;

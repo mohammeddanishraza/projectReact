@@ -1,7 +1,6 @@
 .container {
     display: flex;
     flex-direction: row-reverse;
-    background-image: url('images/images.jpeg');
     position: fixed;
     top: 0;
     left: 0;

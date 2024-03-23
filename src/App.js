@@ -8,7 +8,7 @@ import SignUpForm from './SignupForm';
 function App() {
   return (
     <Router>
-      <div className='container'>
+      <div >
       <Routes>
         <Route path="/" element={<LoginForm />} />
         <Route path="/signup" element={<SignUpForm />} />

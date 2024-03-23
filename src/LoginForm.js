@@ -22,7 +22,7 @@ function LoginForm() {
   };
   const handleSubmit = () => {
    alert("Username: "+username+"\nPassword: "+password);
-
+   window.location.href = '/signup';
   };
 
   const validateForm = (username, password) => {
