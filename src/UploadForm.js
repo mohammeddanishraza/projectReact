@@ -79,7 +79,7 @@ function UploadForm() {
         alert(responseData.message);
 
         if (responseData.status === 'success') {
-          window.location.href = '/patients?token='+token+'';
+          //window.location.href = '/patients?token='+token+'';
         } else if (responseData.status === 500) {
           window.location.href = '/';
         } else {
