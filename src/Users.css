@@ -1,0 +1,81 @@
+.user-container{
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+.user-details{
+  width: 95%;
+  background-color: rgb(255, 255, 255);
+  margin-top: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  padding-top: 20px;
+  box-shadow: 0 15px 4px rgba(0, 0, 0, 0.4); /* Add shadow */
+
+}
+.user-info {
+  display: grid;
+  grid-template-columns: repeat(11, 1fr); /* Divide the row into 7 equal parts */
+  gap: 20px;
+  align-items: center;
+}
+.redirect-btn{
+  margin-top: 40px;
+  margin-left: 40px;
+  width:100px;
+  height:50px;
+  background-color: lightblue;
+  border-radius: 30px;
+  color:white;
+  border:none;
+  cursor: pointer;
+}
+.redirect-btn:hover{
+  background-color: rgb(59, 127, 149);
+}
+.user-info div:nth-child(3) {
+  grid-column: span 2; /* Span 3 columns for symptoms */
+}
+.user-info div:nth-child(1) {
+  grid-column: span 2; /* Span 3 columns for symptoms */
+}
+.user-info div:nth-child(6) {
+  grid-column: span 2; /* Span 3 columns for symptoms */
+}
+
+.info-label{
+  font-size: 18px;
+}
+.info-text{
+  margin-top: 0;
+  font-size: 14px;
+}
+.view-btn{
+  width:120px;
+  height:40px;
+  background-color: lightblue;
+  border: none;
+  border-radius: 30px;
+  color:white
+}
+.view-btn:hover{
+  background-color: rgb(25, 106, 133);
+  cursor: pointer;
+}
+.delete-btn{
+  width:120px;
+  height:40px;
+  background-color: rgb(205, 43, 43);
+  border: none;
+  border-radius: 30px;
+  color:white
+}
+.delete-btn:hover{
+  background-color: rgb(111, 18, 18);
+  cursor: pointer;
+}

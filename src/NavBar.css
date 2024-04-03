@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding-top: 150px;
+    background-color: #0a2837; /* Adjust the padding-top to match the height of your Navbar */
+  }
+  
+  .navbar {
+    position: fixed;
+    top: 5px;
+    left: 10px; /* Set Navbar to the left edge of the screen */
+    right: 10px; /* Add margin to the right side */
+    background-color: lightblue;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 40px;
+    z-index: 1000; /* Ensure Navbar stays on top */
+    overflow: hidden; /* Add overflow hidden to prevent content overflow */
+    box-shadow: 0 10px 4px rgba(0, 0, 0, 0.4); /* Add shadow */
+  }
+  
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    list-style-type: none;
+    display: flex;
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Add gap between items */
+  }
+  
+  .navbar-right li {
+    border-radius: 20px;
+  }
+  
+  .navbar-right li a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 10px;
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Add border-radius */
+    cursor: pointer;
+  }
+  
+  .navbar-right li a:hover {
+    background-color: white;
+    color: lightblue;
+  }
+  
+  .username {
+    margin-right: 20px;
+    color: white;
+  }
+  
+  .logout-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .logout-icon {
+    width: 24px;
+    height: 24px;
+  }
+  /* Add this style to highlight the active page */
+.navbar-right li.active a {
+  background-color: white;
+  color: lightblue;
+}

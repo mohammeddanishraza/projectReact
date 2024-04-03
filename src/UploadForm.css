@@ -1,0 +1,152 @@
+/* SignupForm.css */
+
+.file {
+  margin: 0 auto;
+  padding: 20px;
+  width: 35%;
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.patient-input{
+  width: 70%;
+  height: 4%;
+  margin-top: 2%;
+  padding:1%;
+  padding-left: 10px;
+  border-radius: 30px;
+  border: none;
+  
+}
+.radio-input{
+  size: 20px;
+  background-color: #1f116f;
+  width: 20px; /* Adjust size */
+  height: 20px;
+}
+.radio-container {
+  margin-top: 2%;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly along the main axis */
+  gap: 100px; /* Add gap between items */
+  align-content: center;
+}
+.radio-container label {
+  display: flex;
+  align-items: center;
+}
+
+.symptoms-input{
+  width: 70%;
+  height: 15%;
+  margin-top: 2%;
+  padding:1%;
+  padding-left: 10px;
+  padding-top: 10px;
+  border-radius: 20px;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+}
+.upload-icon{
+  width: 150px;
+  height: 150px;
+}
+.file-upload-container {
+  border: 2px dashed #ced4da; /* Set border color */
+  padding: 40px;
+  margin-top: 20px;
+  width: 100%;
+  align-content: center;
+  height: 57%;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.file-upload-container:hover {
+  border-color: #6c757d; /* Change border color on hover */
+}
+
+.instructions {
+  font-size: 18px;
+  color: #aecbe8; /* Set text color */
+  margin-top: 10px;
+}
+
+.selected-file {
+  margin-top: 10px;
+  
+}
+
+.selected-file p {
+  font-size: 16px;
+  color: rgb(251, 248, 248); /* Set text color */
+  
+}
+.file-input{
+display: none;
+}
+.custom-file-input-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #3498db; /* Set your desired button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.custom-file-input-button:hover{
+  background-color: #114a6f;
+   /* Set your desired button color */
+
+}
+
+.remove-file-btn,
+.upload-file-btn {
+  background-color: #dc3545; /* Set background color */
+  color: white; /* Set text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-file-btn:hover {
+  background-color: #c82333; /* Change background color on hover */
+}
+
+.upload-file-btn {
+  margin-top: 25px; /* Adjust margin as needed */
+  background-color: #5ea5cd;
+  font-size: 15px;
+  width:60%;
+  padding: 2%;
+  border-radius: 30px;
+}
+
+.upload-file-btn:hover {
+  background-color: #417898;
+}
+
+.upload-file-btn:disabled{
+  background-color: #353739;
+}
+.upload-file-btn:disabled:hover{
+  background-color: #353739;
+}
+
+.first-button {
+  margin-top: 10px;
+  background-color: #dc3545; /* Set background color */
+  color: white; /* Set text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+
+}
